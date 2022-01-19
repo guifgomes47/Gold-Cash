@@ -1,0 +1,131 @@
+/* GLOBAL */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: #282828;
+    color: #FFAB35;
+    font-family: 'Inter', sans-serif;
+}
+
+.container{
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+/* Titles */
+h2{
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+}
+
+/* HEADER */
+header{
+    background-color: #0F0F0F;
+    padding: 2rem 0 10rem;
+}
+
+#logo{
+    color: #FFD138;
+    font-weight: 100;
+    text-align: center;
+}
+
+header h1{
+
+}
+
+/* BALANCE */
+#balance{
+    margin-top: -8rem;
+    
+}
+
+#balance h2{
+    color: #FFD138;
+    margin-top: 0;
+}
+
+/* Cards */
+.card{
+    background: #1a1a1a;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+    margin-bottom: 2rem;
+}
+
+.card h3{
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.card p{
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.card.total{
+    color: white;
+}
+
+/* Table */
+#data-table{
+    width: 100%;
+    border-spacing: 0 0.5rem;
+
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child{
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+table thead tr th:last-child,
+table tbody tr td:last-child{
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+table tbody tr{
+    opacity: 0.7;
+}
+table tbody tr:hover{
+    opacity: 1;
+}
+
+table tbody td{
+    background: #1a1a1a;
+    padding: 1rem 2rem;
+    font-weight: normal;
+}
+
+
+
+table th{
+    background: #1a1a1a;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+td.description{
+    color: #FFB855;
+}
+
+td.income{
+    color: #B5FFB6;
+}
+
+td.expense{
+    color: #FFB6B6;
+}
+/* Foooter */
+footer{
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color:#FFD138;
+    opacity: 0.6;
+}
