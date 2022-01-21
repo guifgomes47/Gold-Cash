@@ -1,70 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gold Cash</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;700&display=swap" rel="stylesheet">
 
-  </head>
-  <body>
-    <header>
-      <h1 id="logo">Gold$Cash</h1>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gold Cash</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;700&display=swap" rel="stylesheet"
+    crossorigin="anonymous">
 
-    <main class='container'>
-      <section id="balance">
-        <div>
-          <h2>Balance</h2>
-        </div>
-        <div class="card">
-          <h3>Entry</h3>
-          <p>$ 5.000,00</p>
-        </div>
-        <div class="card">
-          <h3>Exit</h3>
-          <p>$ 3.200,00</p>
-        </div>
-        <div class="card total">
-          <h3>Total</h3>
-          <p>$ 1.800,00</p>
-        </div>
-      </section>
-      <section id="transaction">
-        <h2>Transaction</h2>
+</head>
 
-        <table id="data-table">
-          <thead>
-            <tr>
-              <th>Description</th>
-              <th>Value</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class='description'>Water</td>
-              <td class='expense'>- $230,00</td>
-              <td class='date'>1/18/2022</td>
-            </tr>
-            <tr>
-              <td class='description'>Internet</td>
-              <td class='expense'>- $340,00</td>
-              <td class='date'>1/09/2022</td>
-            </tr>
-            <tr>
-              <td class='description'>WebSite Creation</td>
-              <td class='income'>$2030,00</td>
-              <td class='date'>1/17/2002</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </main>
+<body>
+  <header>
+    <h1 id="logo">Gold$Cash</h1>
+  </header>
 
-    <footer><p>Gold$Cash</p></footer>
-  </body>
+  <main class='container'>
+    <section id="balance">
+      <h2 class="sr-only">Balance</h2>
+      <div class="card">
+        <h3>
+          <span>Entry</span>
+          <img src="./assets/income.svg" alt="Income Image">
+        </h3>
+        <p>$ 5.000,00</p>
+      </div>
+      <div class="card">
+        <h3>
+          <span>Exit</span>
+          <img src="./assets/expense.svg" alt="Expense Image">
+        </h3>
+        <p>$ 3.200,00</p>
+      </div>
+      <div class="card total">
+        <h3><span>Total</span>
+          <img src="./assets/total.svg" alt="Total Image">
+        </h3>
+        <p>$ 1.800,00</p>
+      </div>
+    </section>
+    <section id="transaction">
+      <h2 class="sr-only">Transaction</h2>
+      <a href="#" class="button new" onclick="Modal.open()">+New Transaction</a>
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Value</th>
+            <th>Date</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class='description'>Water</td>
+            <td class='expense'>- $230,00</td>
+            <td class='date'>1/18/2022</td>
+            <td><img src="./assets/minus.svg" alt="Remove Transaction"></td>
+          </tr>
+          <tr>
+            <td class='description'>Internet</td>
+            <td class='expense'>- $340,00</td>
+            <td class='date'>1/09/2022</td>
+            <td><img src="./assets/minus.svg" alt="Remove Transaction"></td>
+          </tr>
+          <tr>
+            <td class='description'>WebSite Creation</td>
+            <td class='income'>$2030,00</td>
+            <td class='date'>1/17/2002</td>
+            <td><img src="./assets/minus.svg" alt="Remove Transaction"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- To open modal add class active to -->
+  <div class="modal-overlay ">
+    <div class="modal">
+      <div id="form">
+        <h2>New Transaction</h2>
+        <form action="">
+          <div class="input-group">
+            <label for="description" class="sr-only">Description</label>
+            <input type="text" id="description" name="description" placeholder="Description">
+          </div>
+
+          <div class="input-group">
+            <label for="amount" class="sr-only">Amount</label>
+            <input type="number" id="amount" name="amount" placeholder="0,00" step="0.01">
+            <small class="help">Use the sign - (minus) to expenses and , (comma) for decimals places </small>
+          </div>
+
+          <div class="input-group">
+            <label for="Date" class="sr-only">Date</label>
+            <input type="date" id="Date" name="Date" placeholder="01/01/2022"></div>
+
+            <div class="input-group actions">
+              <a href="#" class="button cancel" onclick="Modal.close()">Cancel</a>
+              <button>Save</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>Gold$Cash</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+
 </html>
