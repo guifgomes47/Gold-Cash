@@ -26,20 +26,20 @@
           <span>Entry</span>
           <img src="./assets/income.svg" alt="Income Image">
         </h3>
-        <p>$ 5.000,00</p>
+        <p id="incomeDisplay">$ 0.00</p>
       </div>
       <div class="card">
         <h3>
           <span>Exit</span>
           <img src="./assets/expense.svg" alt="Expense Image">
         </h3>
-        <p>$ 3.200,00</p>
+        <p id="expenseDisplay">$ 0.00</p>
       </div>
       <div class="card total">
         <h3><span>Total</span>
           <img src="./assets/total.svg" alt="Total Image">
         </h3>
-        <p>$ 1.800,00</p>
+        <p id="totalDisplay">$ 0.00</p>
       </div>
     </section>
     <section id="transaction">
@@ -55,24 +55,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class='description'>Water</td>
-            <td class='expense'>- $230,00</td>
-            <td class='date'>1/18/2022</td>
-            <td><img src="./assets/minus.svg" alt="Remove Transaction"></td>
-          </tr>
-          <tr>
-            <td class='description'>Internet</td>
-            <td class='expense'>- $340,00</td>
-            <td class='date'>1/09/2022</td>
-            <td><img src="./assets/minus.svg" alt="Remove Transaction"></td>
-          </tr>
-          <tr>
-            <td class='description'>WebSite Creation</td>
-            <td class='income'>$2030,00</td>
-            <td class='date'>1/17/2002</td>
-            <td><img src="./assets/minus.svg" alt="Remove Transaction"></td>
-          </tr>
+
         </tbody>
       </table>
     </section>
@@ -83,7 +66,7 @@
     <div class="modal">
       <div id="form">
         <h2>New Transaction</h2>
-        <form action="">
+        <form action="" onsubmit="Form.submit(event)">
           <div class="input-group">
             <label for="description" class="sr-only">Description</label>
             <input type="text" id="description" name="description" placeholder="Description">
@@ -102,7 +85,7 @@
 
           <div class="input-group actions">
             <a href="#" class="button cancel" onclick="Modal.close()">Cancel</a>
-            <button>Save</button>
+            <button type="submit">Save</button>
           </div>
         </form>
       </div>
