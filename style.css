@@ -1,8 +1,8 @@
 /* GLOBAL */
 
-:root{
-    --dark-green: #238301;
-    --dark-gray: #242424;
+:root {
+  --dark-green: #238301;
+  --dark-gray: #242424;
 }
 
 * {
@@ -52,36 +52,36 @@ a:hover {
   color: var(--dark-green);
 }
 
-button{
-    width: 100%;
-    height: 50px;
-    border: none;
-    color: white;
-    background-color: var(--dark-green);
-    padding: 0;
-    border-radius: 0.2rem;
-    cursor: pointer;
+button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  color: white;
+  background-color: var(--dark-green);
+  padding: 0;
+  border-radius: 0.2rem;
+  cursor: pointer;
 }
 
-button:hover{
-    background-color: #00a103;
+button:hover {
+  background-color: #00a103;
 }
 
-.button.cancel{
-    color: #ca0000;
-    border: 2px #ca0000 solid;
-    border-radius: 0.2rem;
-    height: 50px;
-    padding: 0;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.6;
+.button.cancel {
+  color: #ca0000;
+  border: 2px #ca0000 solid;
+  border-radius: 0.2rem;
+  height: 50px;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.6;
 }
 
-.button:hover{
-    opacity: 1;
+.button:hover {
+  opacity: 1;
 }
 
 .button.new {
@@ -189,70 +189,71 @@ td.expense {
 }
 
 /* Modal */
-.modal-overlay{
-    height: 100%;
-    width: 100%;
+.modal-overlay {
+  height: 100%;
+  width: 100%;
 
-    background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 
-    position: fixed;
-    top: 0;
+  position: fixed;
+  top: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 
-    z-index: 999;
+  z-index: 999;
 }
 
-.modal-overlay.active{
-    opacity: 1;
-    visibility: visible;
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
 }
-.modal{
-    background: #F0F2F5;
-    padding: 2.4rem;
-    max-width: 500px;
-    width: 90%;
+.modal {
+  background: #f0f2f5;
+  padding: 2.4rem;
+  max-width: 500px;
+  width: 90%;
 
-    z-index: 1;
+  z-index: 1;
 }
 
 /* Form */
-#form{
-    color: black;
+#form {
+  color: black;
 }
 
-#form h2{
-    margin-top: 0;
+#form h2 {
+  margin-top: 0;
 }
-input{
-    border: none;
-    border-radius: .2rem;
+input {
+  border: none;
+  border-radius: 0.2rem;
 
-    padding: .8rem;
-    width: 100%;
-}
-
-.input-group{
-    margin: .8rem;
+  padding: 0.8rem;
+  width: 100%;
 }
 
-.input-group small{
-    opacity: 0.5;
+.input-group {
+  margin: 0.8rem;
 }
 
-.input-group.actions{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.input-group small {
+  opacity: 0.5;
 }
 
-.input-group.actions .button, .input-group.actions button{
-    width: 48%;
+.input-group.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button {
+  width: 48%;
 }
 /* Foooter */
 footer {
