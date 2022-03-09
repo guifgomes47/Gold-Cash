@@ -68,16 +68,18 @@ button:hover {
 }
 
 .button.cancel {
-  color: #ca0000;
-  border: 2px #ca0000 solid;
-  border-radius: 0.2rem;
+  width: 100%;
   height: 50px;
+  border: none;
+  color: white;
+  background-color: #df0000;
   padding: 0;
+  border-radius: 0.2rem;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .button:hover {
@@ -212,7 +214,7 @@ td.expense {
   visibility: visible;
 }
 .modal {
-  background: #f0f2f5;
+  background: #252525;
   padding: 2.4rem;
   max-width: 500px;
   width: 90%;
@@ -221,13 +223,15 @@ td.expense {
 
 /* Form */
 #form {
-  color: black;
+  color: rgb(221, 221, 221);
 }
 
 #form h2 {
   margin-top: 0;
 }
 input {
+  color: rgb(221, 221, 221);
+  background-color: #494949;
   border: none;
   border-radius: 0.2rem;
 
@@ -236,6 +240,7 @@ input {
 }
 
 .input-group {
+  color: rgb(221, 221, 221);
   margin: 0.8rem;
 }
 
